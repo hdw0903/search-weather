@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import OpenWeather from 'react-open-weather-widget';
+import 'react-open-weather-widget/lib/css/ReactWeather.css';
 import './App.css';
+import GooglePlaceSearch from './components/GooglePlaceSearch';
 
 function App() {
+  const [placeInfo, setPlaceInfo] = useState(undefined);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GooglePlaceSearch setPlaceInfo={setPlaceInfo} />
+      {placeInfo && (
+        <OpenWeather
+          forecast="5days"
+          apikey={process.env.REACT_APP_OPEN_WEATHER_KEY}
+          lang="ko"
+          type="geo"
+          lat={placeInfo.lat}
+          lon={placeInfo.lon}
+        />
+      )}
+    </>
   );
 }
 
