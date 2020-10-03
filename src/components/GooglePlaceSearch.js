@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Geocode from 'react-geocode';
+import './GooglePlaceSearch.css';
 
 const GooglePlaceSearch = ({ setPlaceInfo }) => {
   const [inputValue, setInputValue] = useState('');
@@ -22,7 +23,11 @@ const GooglePlaceSearch = ({ setPlaceInfo }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    if (setPlaceInfo !== undefined) {
+      setPlaceInfo(undefined);
+    }
     fromAddress(inputValue);
+    setInputValue('');
   };
 
   const onChangeInput = (e) => {
@@ -30,11 +35,13 @@ const GooglePlaceSearch = ({ setPlaceInfo }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={onSubmit}>
+    <div className="background container">
+      <p>원하는 도시를 검색해 날씨를 확인해보세요!</p>
+      <form className="search-form" onSubmit={onSubmit}>
         <input
-          placeholder="장소 검색"
+          placeholder="장소를 입력해 주세요"
           type="text"
+          autoFocus
           value={inputValue}
           onChange={onChangeInput}
         />
