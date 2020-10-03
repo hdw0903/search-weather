@@ -1,0 +1,44 @@
+.img-box {
+  background-color: aqua;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-width: 100%;
+  min-height: 200px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 120px;
+  background: #008f8f url(//c.tadst.com/gfx/n/citybg-map.png) 50% 5% no-repeat;
+  background-attachment: fixed;
+}
+.container p {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  height: 28px;
+}
+.search-form input {
+  padding: 0;
+  border: 0;
+  padding-left: 3px;
+  border-radius: 4px 0 0 4px;
+  border-color: #fff;
+}
+.search-form button {
+  border-radius: 0 4px 4px 0;
+  color: #fff;
+  border: 1px solid #3b73b4;
+  background: #4a90e2;
+}
+.search-form button:hover,
+.search-form button:focus {
+  background: #2275d7;
+  transition: 0.5s;
+}
