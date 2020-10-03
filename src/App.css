@@ -440,3 +440,11 @@ textarea {
   color: #000;
   padding: 0.2em 0;
 }
+
+/* react-geocode css */
+.rw-main.type-5days {
+  border-radius: initial;
+}
+.rw-main .rw-box-right {
+  border-radius: initial;
+}
