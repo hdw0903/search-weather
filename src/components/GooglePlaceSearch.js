@@ -35,19 +35,21 @@ const GooglePlaceSearch = ({ setPlaceInfo }) => {
   };
 
   return (
-    <div className="background container">
-      <p>원하는 도시를 검색해 날씨를 확인해보세요!</p>
-      <form className="search-form" onSubmit={onSubmit}>
-        <input
-          placeholder="장소를 입력해 주세요"
-          type="text"
-          autoFocus
-          value={inputValue}
-          onChange={onChangeInput}
-        />
-        <button>검색</button>
-      </form>
-    </div>
+    <>
+      <div className="background container">
+        <p>원하는 도시를 검색해 날씨를 확인해보세요!</p>
+        <form className="search-form" onSubmit={onSubmit} autoComplete="on">
+          <input
+            placeholder="장소를 입력해 주세요"
+            type="text"
+            autoFocus
+            value={inputValue}
+            onChange={onChangeInput}
+          />
+          <button>검색</button>
+        </form>
+      </div>
+    </>
   );
 };
 
