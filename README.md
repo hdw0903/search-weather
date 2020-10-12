@@ -1,8 +1,14 @@
 # Search-Weather
 
 도시 검색으로 날씨 정보를 보여주는 웹사이트입니다.
+![](/search-weather.png)
+<a>https://hdw0903.github.io/search-weather/</a>
 
 ---
+
+## Development
+
+> npm start
 
 ## 제작 포인트
 
