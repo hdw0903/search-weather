@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-height: 120px;
+  height: 120px;
   background: #008f8f url(//c.tadst.com/gfx/n/citybg-map.png) 50% 5% no-repeat;
   background-attachment: fixed;
 }
@@ -42,3 +42,18 @@
   background: #2275d7;
   transition: 0.5s;
 }
+/* @media only screen and (max-device-width: 768px) and (max-device-width: 1024px) {
+  #root {
+    height: 698px;
+  }
+  .container {
+    height: calc(698px / 3);
+  }
+  .rw-box {
+    height: calc(698px / 3);
+  }
+  .rw-box-days {
+    height: calc(698px / 3);
+    align-items: center;
+  }
+} */
